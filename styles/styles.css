@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html  {
+    font-size: 15px;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --chrysler-blue: #5722cdff;
+    --majorelle-blue: #4b49e8ff;
+    --magnolia: #f2f0ffff;
+    --french-rose: #ed4385ff;
+    --night: #0c0c0cff;
+    --licht-grey: #F3F6F9;
+    --grey:  #7A7A7A;
+}
+
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: var(--night);
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+h1,
+h2 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    text-align: center;
+    padding: .5em;
+}
+
+a {
+    color: var(--chrysler-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--french-rose);
+    color: var(--magnolia);
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--french-rose);
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    margin: 0 20px;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dotted red;
+    margin: 4rem 25rem;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 52%, rgba(87,34,205,1) 100%);
+    color: var(--magnolia);
+    font-weight: 300;
+}
+
+header .inner-container {
+}
+
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+    list-style: none;
+    border: 1px dashed green;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li ul {
+    display: inline-block;
+}
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.hello {
+    color: var(--chrysler-blue)
+}
+
+.hello p {
+    color: var(--night);
+    font-weight: 600;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
