@@ -43,6 +43,7 @@ img {
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     color: var(--night);
+    margin: 0 -20px 0 -20px;
 }
 
 input,
@@ -98,7 +99,7 @@ button {
 }
 
 .inner-container {
-    flex-basis: 1200px;
+    flex-basis: auto;
 
     display: flex;
     flex-direction: column;
@@ -120,7 +121,9 @@ header {
     font-weight: 300;
 }
 
-header .inner-container {
+.header-column {
+    display: flex;
+    flex-direction: column;
 }
 
 
