@@ -10,6 +10,8 @@
     4. Areas
         4.1 Header
         4.2 Introduction
+        4.3 Work
+
     5. Media Queries
 ////////////////////////*/
 
@@ -22,7 +24,7 @@
 }
 
 html  {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 img {
@@ -43,7 +45,6 @@ img {
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     color: var(--night);
-    margin: 0 -20px 0 -20px;
 }
 
 input,
@@ -55,23 +56,19 @@ button {
 h1,
 h2 {
     font-family: 'Merriweather', 'Times New Roman', serif;
-    text-align: center;
-    padding: .5em;
 }
 
-a {
-    color: var(--chrysler-blue);
+a,
+a:visited {
     text-decoration: none;
+    color: var(--chrysler-blue);
 }
 
 a:hover {
     cursor: pointer;
 }
 
-a:visited {
-    color: black;
-    text-decoration: underline;
-}
+
 
 button {
     background-color: var(--french-rose);
@@ -94,6 +91,7 @@ button {
 .outer-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     border: 2px solid black;
     margin: 0 20px;
 }
@@ -105,7 +103,7 @@ button {
     flex-direction: column;
     align-items: center;
     border: 2px dotted red;
-    margin: 4rem 25rem;
+    margin: 4rem 10rem;
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -119,6 +117,7 @@ header {
     background: linear-gradient(90deg, rgba(72,69,228,1) 52%, rgba(87,34,205,1) 100%);
     color: var(--magnolia);
     font-weight: 300;
+    position: relative;
 }
 
 .header-column {
@@ -126,7 +125,10 @@ header {
     flex-direction: column;
 }
 
-
+header h1 {
+    text-align: center;
+    padding: .5em;
+}
 
 .navigation {
     display: flex;
@@ -143,18 +145,96 @@ header {
 
 .navigation li ul {
     display: inline-block;
+    padding: 1em 2em;
 }
 
+.navigation a {
+    color: var(--magnolia);
+}
+
+
+
+.header-squiggle {
+    position: absolute;
+    width: 5em;
+    bottom: 0;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
 .hello {
-    color: var(--chrysler-blue)
+    color: var(--chrysler-blue);
+}
+
+.hello h2 {
+    text-align: center;
 }
 
 .hello p {
     color: var(--night);
     font-weight: 600;
+    margin: 10rem 0 0 0;
+    border: 1px solid green;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+/*inner container moet standaard net zo groot als outer container worden*/
+
+.work .inner-container {
+
+    margin: 10px;
+    background-color: var(--licht-grey);
+}
+
+/*flex basis wordt op de hoogte toegepast maar is row flexbox.*/
+
+.work article {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid mediumpurple;
+    padding: 20px;
+    margin: 20px;
+}
+
+.work h2 {
+    text-align: left;
+}
+
+.work article:nth-child(even) {
+    flex-direction: row;
+}
+
+/*flex basis vs max width?*/
+
+.picture-work {
+    flex-basis: 40em;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border: 3px solid goldenrod;
+}
+
+.description-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20em;
+    padding: 3em;
+    border: 1px solid pink;
+
+}
+
+.work-squiggle {
+    max-width: 40px;
+    margin: 2em 0;
+}
+
+.work a,
+.work a:visited {
+    text-transform: uppercase;
+    margin: 2em 0;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
