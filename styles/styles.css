@@ -54,7 +54,8 @@ button {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Merriweather', 'Times New Roman', serif;
 }
 
@@ -213,8 +214,11 @@ header h1 {
     flex-basis: 40em;
     flex-grow: 0;
     flex-shrink: 1;
-    border: 3px solid goldenrod;
+    box-shadow: 0 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+
 }
+
+
 
 .description-work {
     display: flex;
@@ -235,6 +239,34 @@ header h1 {
 .work a:visited {
     text-transform: uppercase;
     margin: 2em 0;
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+
+
+.description-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid rebeccapurple;
+}
+
+.description-services article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--chrysler-blue);
+    padding: 2rem;
+    margin: 0 10px;
+}
+
+.services h3 {
+    color: var(--chrysler-blue)
+}
+
+.services p {
+    color: var(--grey);
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
