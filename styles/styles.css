@@ -361,6 +361,15 @@ textarea::placeholder {
     padding: 0.5rem;
 }
 
+input[type="text"],
+input[type="email"],
+textarea[type="message-field"]
+{
+    font-size: 0.8rem;
+    font-family: Roboto, 'Arial', sans-serif;
+}
+
+
 button {
     align-self: center;
     width: 10rem;
