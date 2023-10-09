@@ -214,10 +214,6 @@ header button {
     background-color: var(--licht-grey);
 }
 
-/* als ik deze innercontainer niet een aparte class van de normale
-inner-container had gegeven wilde hij op geen enkele manier dezelfde grootte
-als de outercontainer aannemen. niet met width en ook niet met flex-basis.*/
-
 .work .inner-container {
     display: flex;
     flex-direction: column;
