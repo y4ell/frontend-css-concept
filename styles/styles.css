@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400;500;600&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -76,7 +76,6 @@ button {
     color: var(--magnolia);
     text-transform: uppercase;
     padding: 1rem 1rem;
-    margin: 1rem 1rem;
     border-radius: 30px;
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
     border: 1px solid var(--french-rose);
@@ -93,13 +92,10 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
     margin: 0 20px;
 }
 
 .inner-container {
-    flex-basis: auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,12 +120,21 @@ header {
 .header-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header .inner-container {
+    flex-basis: 320px;
+    width: 600px;
 }
 
 header h1 {
     text-align: center;
     padding: .5em;
 }
+
 
 .navigation {
     display: flex;
@@ -139,12 +144,12 @@ header h1 {
     flex-shrink: 1;
     flex-grow: 0;
     list-style: none;
-    border: 1px dashed green;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
-.navigation li ul {
+.navigation ul li {
     display: inline-block;
     padding: 1em 2em;
 }
@@ -154,11 +159,24 @@ header h1 {
 }
 
 
-
 .header-squiggle {
     position: absolute;
-    width: 5em;
+    width: 3.5rem;
     bottom: 0;
+}
+
+header h1 {
+    margin: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header button {
+    margin: 1.5rem;
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -167,25 +185,36 @@ header h1 {
     color: var(--chrysler-blue);
 }
 
+.hello .inner-container {
+    width: 600px;
+}
+
 .hello h2 {
     text-align: center;
+    margin: 1rem;
 }
 
 .hello p {
     color: var(--night);
-    font-weight: 600;
-    margin: 10rem 0 0 0;
-    border: 1px solid green;
+    font-weight: 500;
+    margin: 3.5rem 0 0 0;
 }
 
 /* --------------- 4.3 Work ------------------- */
 
 /*inner container moet standaard net zo groot als outer container worden*/
 
-.work .inner-container {
-
-    margin: 10px;
+.work {
     background-color: var(--licht-grey);
+}
+
+/* als ik deze innercontainer niet een aparte class van de normale
+inner-container had gegeven wilde hij op geen enkele manier dezelfde grootte
+als de outercontainer aannemen. niet met width en ook niet met flex-basis.*/
+
+.inner-container-work {
+    display: flex;
+    flex-direction: column;
 }
 
 /*flex basis wordt op de hoogte toegepast maar is row flexbox.*/
@@ -211,11 +240,16 @@ header h1 {
 /*flex basis vs max width?*/
 
 .picture-work {
-    flex-basis: 40em;
+    width: 100%;
+    flex-basis: 600px;
     flex-grow: 0;
     flex-shrink: 1;
-    box-shadow: 0 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+    line-height: 0px;
+    box-shadow: 0 .2rem .25rem rgba(0, 0, 0, 0.4);
+}
 
+.photo-work {
+    display: block;
 }
 
 
@@ -243,22 +277,28 @@ header h1 {
 
 /* --------------- 4.4 Services ------------------- */
 
-
+/*zorgen dat row gap en column gap gelijke grootte is (ook nodig bij verkleinen?)*/
 
 .description-services {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     border: 2px solid rebeccapurple;
+    row-gap: 3rem;
+    column-gap: 3rem;
 }
 
 .description-services article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-basis: 250px;
+    flex-shrink: 0;
     border: 1px solid var(--chrysler-blue);
-    padding: 2rem;
-    margin: 0 10px;
+}
+
+.description-services img {
+    width: 60px;
 }
 
 .services h3 {
@@ -268,5 +308,21 @@ header h1 {
 .services p {
     color: var(--grey);
 }
+
+/* --------------- 4.5 Form ------------------- */
+
+.form-container {
+    background: rgb(72,69,228);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 52%, rgba(87,34,205,1) 100%);
+    color: var(--magnolia);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
