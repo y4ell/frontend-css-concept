@@ -214,10 +214,6 @@ header button {
     background-color: var(--licht-grey);
 }
 
-/* als ik deze innercontainer niet een aparte class van de normale
-inner-container had gegeven wilde hij op geen enkele manier dezelfde grootte
-als de outercontainer aannemen. niet met width en ook niet met flex-basis.*/
-
 .work .inner-container {
     display: flex;
     flex-direction: column;
@@ -261,7 +257,7 @@ als de outercontainer aannemen. niet met width en ook niet met flex-basis.*/
     justify-content: center;
     max-width: 20em;
     padding: 3em;
-    }
+}
 
 .work-squiggle {
     max-width: 40px;
@@ -365,6 +361,15 @@ textarea::placeholder {
     padding: 0.5rem;
 }
 
+input[type="text"],
+input[type="email"],
+textarea[type="message-field"]
+{
+    font-size: 0.8rem;
+    font-family: Roboto, 'Arial', sans-serif;
+}
+
+
 button {
     align-self: center;
     width: 10rem;
@@ -388,6 +393,7 @@ button {
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
 
 @media screen and (max-width: 480px) {
     html {
